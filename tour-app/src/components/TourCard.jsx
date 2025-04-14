@@ -27,3 +27,4 @@ const tourCard = ({id, name, info, price, image}) => {
     )
 
 }
+export default tourCard;

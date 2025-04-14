@@ -10,7 +10,7 @@ const Gallery = ({tours, settours, onRemove}) => {
     //function to fetch data from API
     const fetchTours = async () => {
         try {
-            const res = await fetch("https://course-api.com/react-tours-project");
+            const res = await fetch("https://api.allorigins.win/raw?url=https://course-api.com/react-tours-project");
             //map the API data to the only field we need
             const data = await res.json();
             const trimmed = data.map((tours) => ({
@@ -28,7 +28,7 @@ const Gallery = ({tours, settours, onRemove}) => {
 
 //run fetchtours once after component mounts
 useEffect(() => {
-    fetchtours();
+    fetchTours();
 }, []);
 //render loading state
 if (loading) {
